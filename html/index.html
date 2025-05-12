@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website</title>
+    <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="../style/gallery.css">
+</head>
+
+<body>
+    <!--NavBar-->
+    <nav class="navbar">
+        <img src="../img/icons8-rick-sanchez-100.png" alt="logo" class="logo">
+        <div class="nav-links">
+            <ul>
+                <li class="active"><a href="#">Dimension C-137</a></li>
+                <li><a href="../html/gallery.html">Dimension Gallery</a></li>
+                <li><a href="../html/jeux.html">Dimension Games</a></li>
+            </ul>
+        </div>
+
+        <img src="../img/menu-btn.png" alt="menu-hamburger" class="menu-burger">
+    </nav>
+
+    <header>
+        <h1>Welcome Rick and Morty Website</h1>
+    </header>
+
+    <h2 class="titlePage">Dimension C-137</h2>
+
+    <!--API Rick et Morty-->
+    <div class="personnages"></div>
+
+    <!-- Formulaire -->
+    <div class="formulaireWrapper ">
+        <form id="formulaire" class="styleformulaire pistoPortail">
+            <input type="text" id="titleInput" class="spaceform formItem" placeholder="Votre mission" required />
+            <textarea id="contentInput" class="spaceform formItem" placeholder="C'est içi pour décrire votre super mission"
+                required></textarea>
+            <button type="submit" class="spaceform">Décollage !</button>
+        </form>
+    </div>
+
+    <!-- Feed (zone des posts) -->
+    <div id="feed"></div>
+
+    <!--bouton refresh-->
+    <div id="bouton">
+        <button id="refreshBtn" class="buttonRick pistoPortail">Pisto Portail activé</button>
+    </div>
+
+
+
+    <footer>
+        <p id="basDePage"> 2025 RickAndMortyAndSarah. All rights reserved.</p>
+    </footer>
+    <script src="../js/index.js"></script>
+    <script src="../js/home.js"></script>
+</body>
+
+</html>
