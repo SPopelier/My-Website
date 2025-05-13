@@ -1,7 +1,4 @@
-/*facile https://mocki.io/v1/49998f59-6350-47cc-b01c-6b1af31186f8
-moyen https://mocki.io/v1/49998f59-6350-47cc-b01c-6b1af31186f8
-difficile https://mocki.io/v1/49998f59-6350-47cc-b01c-6b1af31186f8
-*/
+
 
 h3 {
 font-size: 45px;
@@ -10,4 +7,106 @@ color : #61D929;
 text-shadow:
     -2px -2px 0 #1e5a02af,
     2px 2px 0 #1e5a02af;
+}
+
+#textLabel {
+font-size: 35px;
+}
+
+#regles{
+    margin: 2rem;
+    font-size: 30px;
+    background-color: #1e5a02af;
+}
+
+#difficulte {
+    position: absolute;
+    justify-items: left;
+}
+
+@media screen and (max-width:900px) {
+
+    header {
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        background-repeat: ;
+    }
+
+    h1 {
+        font-size: 26px;
+        max-width: 50vw;
+        text-align: left;
+        color: #61D929;
+        padding: 2px 4px;
+        text-shadow: unset;
+        text-shadow:
+            -1px -1px 0 #CAD4C4,
+            1px 1px 0 #CAD4C4;
+    }
+
+    .logo {
+        display: none;
+    }
+
+    .navbar {
+        padding: 0%;
+    }
+
+    .navbar a {
+        color: #262C3A;
+    }
+
+    .navbar .nav-links ul li.active a {
+        color: #262C3A;
+        font-weight: 600;
+        text-shadow:
+            -2px -2px 0 #61D929,
+            2px 2px 0 #61D929;
+    }
+
+    .navbar .menu-burger {
+        display: block;
+    }
+
+    .navbar .nav-links {
+        display: none;
+        visibility: none;
+    }
+
+    .nav-links {
+        top: 0%;
+        left: 30px;
+        background-color: #6bf81952;
+        backdrop-filter: blur(7px);
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: -100%;
+        transition: all 0.5 ease;
+
+    }
+
+    .nav-links ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar .nav-links ul li {
+        margin: 25px 0;
+        font-size: 1.2em;
+    }
+
+    .navbar .logo {
+        position: absolute;
+        top: 30px;
+        left: 30px;
+    }
+
+    .nav-links .mobile-menu {
+        margin-right: 0%;
+    }
 }

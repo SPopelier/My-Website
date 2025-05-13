@@ -21,5 +21,11 @@ menuHamburger.addEventListener('click',()=>{
 
 })
 
-var refresh = window.getElementById('refresh');
-refresh.addEventListener('click', location.reload(), false);
+document.addEventListener('DOMContentLoaded', () => {
+    const refreshBtn = document.getElementById('btnRefresh');
+    if (refreshBtn) {
+        refreshBtn.addEventListener('click', () => {
+            window.location.reload(false);
+        });
+    }
+});
