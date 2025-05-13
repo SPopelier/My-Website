@@ -6,13 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Website</title>
     <link rel="stylesheet" href="../style/style.css">
-    <link rel="stylesheet" href="../style/gallery.css">
+    <link rel="stylesheet" href="../style/home.css">
 </head>
 
 <body>
     <!--NavBar-->
     <nav class="navbar">
-        <img src="../img/icons8-rick-sanchez-100.png" alt="logo" class="logo">
+        <img src="../img/logoRick.png" alt="logo" class="logo">
         <div class="nav-links">
             <ul>
                 <li class="active"><a href="#">Dimension C-137</a></li>
@@ -35,7 +35,7 @@
 
     <!-- Formulaire -->
     <div class="formulaireWrapper ">
-        <form id="formulaire" class="styleformulaire pistoPortail">
+        <form id="formulaire" class="styleformulaire">
             <input type="text" id="titleInput" class="spaceform formItem" placeholder="Votre mission" required />
             <textarea id="contentInput" class="spaceform formItem" placeholder="C'est içi pour décrire votre super mission"
                 required></textarea>
@@ -48,7 +48,7 @@
 
     <!--bouton refresh-->
     <div id="bouton">
-        <button id="refreshBtn" class="buttonRick pistoPortail">Pisto Portail activé</button>
+        <button type="button" onclick='window.location.reload(false)' class="buttonRick pistoPortail" value="refresh">Pisto Portail activé</button>
     </div>
 
 

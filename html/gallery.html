@@ -13,88 +13,74 @@
 <body>
     <header>
         <nav class="navbar">
-            <img src="../img/icons8-rick-sanchez-100.png" alt="logo" class="logo">
+            <img src="../img/logoRick.png" alt="logo" class="logo">
             <div class="nav-links">
                 <ul>
-                    <li class="active"><a href="../html/index.html">Dimension C-137</a></li>
-                    <li><a href="../html/gallery.html">Dimension Gallery</a></li>
+                    <li><a href="../html/index.html">Dimension C-137</a></li>
+                    <li class="active"><a href="../html/gallery.html">Dimension Gallery</a></li>
                     <li><a href="../html/jeux.html">Dimension Games</a></li>
                 </ul>
             </div>
 
-            <img src="../projetSiteWeb/menu-btn.png" alt="menu-hamburger" class="menu-burger">
+            <img src="../img/menu-btn.png" alt="menu-hamburger" class="menu-burger">
         </nav>
 
         <header>
             <h1>Welcome Rick and Morty Website</h1>
         </header>
 
-        <h2 class="titlePage">Dimension Gallery</h2>
+        <main>
+            <h2 class="titlePage">Dimension Gallery</h2>
 
-        <div class="controls">
-            <button class="pistoPortail" onclick="setView('grid')">Mosaïque</button>
-            <button class="pistoPortail" onclick="setView('column')">Colonne</button>
-        </div>
+            <section class="carousel" aria-labelledby="carouselheading">
+                <h2 id="carouselheading" class="visuallyhidden">Comment vous équiper ?</h2>
+                <button class="carousel-button prev">&#10094;</button>
+                <div class="carousel-track-container">
+                    <ul class="carousel-track">
+                        <li class="carousel-slide current-slide"><img src="https://m.media-amazon.com/images/I/613xJcc4GlL.jpg" alt="Image 1"></li>
+                        <li class="carousel-slide"><img src="https://fr.shopping.rakuten.com/cat/500x500/figurine+pop+mr+meeseeks.jpg" alt="Image 2"></li>
+                        <li class="carousel-slide"><img src="https://m.media-amazon.com/images/I/81I30SVmOYL._AC_UF1000,1000_QL80_.jpg" alt="Image 3"></li>
+                        <li class="carousel-slide"><img src="https://dl.myminifactory.com/object-assets/5c3f2b132af70/images/720X720-shapeways-0004-img-7494.jpg" alt="Image 4"></li>
+                        <li class="carousel-slide"><img src="https://img.joomcdn.net/8df4319dfb4c1ddbb465101c642ffb9cde280461_original.jpeg" alt="Image 5"></li>
+                        <li class="carousel-slide"><img src="https://imaginaire.com/docs/3663411310747.JPG" alt="Image 6"></li>
+                        <li class="carousel-slide"><img src="https://i.ebayimg.com/images/g/cKMAAOSwdcJk9CLA/s-l400.jpg" alt="Image 7"></li>
+                        <li class="carousel-slide"><img src="https://mycrazystuff.com/17339-large_default/chope-rick-and-morty.jpg" alt="Image 8"></li>
+                        <li class="carousel-slide"><img src="https://static.thcdn.com/images/large/original/productimg/1600/1600/11746679-1134584331813356.jpg" alt="Image 9"></li>
 
-        <div id="gallery">
-            <div class="dimensionGallery">
-                <img src="../img/img1.jpeg" alt="imagePresentationGallery">
-                <div class="texteImageGallery">Nos héros</div>
+                    </ul>
+                </div>
+                <button class="carousel-button next buttonRick">&#10095;</button>
+            </section>
+
+            <div>
+                <button class="pistoPortail buttonRick" onclick="setView('grid')">Mosaïque</button>
+                <button class="pistoPortail buttonRick" onclick="setView('column')">Colonne</button>
             </div>
 
-            <div class="dimensionGallery">
-                <img src="../img/saison1.jpeg" alt="imageSaison1">
-                <div class="texteImageGallery">Saison 1</div>
+            <div class="container">
+                <div class="dimensionGallery" id="gallery">
+                </div>
             </div>
 
-            <div class="dimensionGallery">
-                <img src="../img/saison2.jpeg" alt="imageSaison2">
-                <div class="texteImageGallery">Saison 2</div>
+            <div class="formulaireGallery">
+                <form id="formulaireImg" class="styleformulaire pistoPortail buttonRick">
+                    <input type="file" id="imageInput" accept="image/*">
+                    <button type="submit" class="spaceform">Décollage !</button>
+                </form>
             </div>
 
-            <div class="dimensionGallery">
-                <img src="../img/saison3.jpeg" alt="imageSaison3">
-                <div class="texteImageGallery">Saison 3</div>
+            <!--bouton refresh-->
+            <div id="bouton">
+                <button type="button" onclick='window.location.reload(false)' class="buttonRick pistoPortail"
+                    value="refresh">Pisto Portail activé</button>
             </div>
-
-            <div class="dimensionGallery">
-                <img src="../img/saison4.jpeg" alt="imageSaison4">
-                <div class="texteImageGallery">Saison 4</div>
-            </div>
-
-            <div class="dimensionGallery">
-                <img src="../img/saison5.jpeg" alt="imageSaison5">
-                <div class="texteImageGallery">Saison 5</div>
-            </div>
-
-            <div class="dimensionGallery">
-                <img src="../img/saison6.jpeg" alt="imageSaison6">
-                <div class="texteImageGallery">Saison 6</div>
-            </div>
-
-            <div class="dimensionGallery">
-                <img src="../img/saison7.jpeg" alt="imageSaison7">
-                <div class="texteImageGallery">Saison 7</div>
-            </div>
-
-            <div class="dimensionGallery">
-                <img src="../img/saison8.jpeg" alt="imageSaison8">
-                <div class="texteImageGallery">Saison 8</div>
-            </div>
-
-        </div>
-
-        <!--bouton refresh-->
-        <div id="bouton">
-            <button id="refreshBtn" class="buttonRick pistoPortail">Pisto Portail activé</button>
-        </div>
-
+        </main>
 
         <footer>
             <p id="basDePage"> 2025 RickAndMortyAndSarah. All rights reserved.</p>
         </footer>
 
-        <script src="../js/gallery.js"></script>
+        <script src="../js/gallery.js" async></script>
 </body>
 
 </html>

@@ -13,7 +13,7 @@ body {
 header {
     height: 200px;
     width: 100vw;
-    background-image: url("../img/TimelineCovers.pro_rick-and-morty-uhmm-facebook-cover.jpg");
+    background-image: url("../img/backgroundHeader.jpg");
     background-color: #262C3A;
     background-repeat: no-repeat;
     background-position: right;
@@ -40,6 +40,11 @@ h1 {
 #bouton{
     margin: 50px;
 }
+
+button:hover {
+    border: 2px solid #CAD4C4;
+}
+
 .navbar {
     position: absolute;
     padding: 50px;
@@ -101,7 +106,10 @@ h1 {
     width: 100%;
     height: auto;
     display: block;
+}
 
+.personnages img:hover {
+    border: 2px solid #CAD4C4;
 }
 
 .personnages .h2 {
@@ -111,22 +119,35 @@ h1 {
 }
 
 .pistoPortail{
-    background-image: url("../img/681b00d06b2e20e4fe7c5dd5d2fcc63d.png");
+    background-image: url("../img/portailInterdimensionnel.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
+
 .buttonRick {
+    justify-content: center;
     padding: 20px;
     font-size: 18px;
     margin: 0 auto;
     font-weight: bolder;
     padding: 1rem 2rem;
     display: block;
-    color: #262C3A;
     border: 2px solid #262C3A;
     border-radius: 30px;
+}
+
+form {
+    width: 50%; /* ou par exemple 400px */
+    margin: 0 auto; /* centre horizontalement */
+    padding: 20px; /* un peu d'espace intérieur */
+    background-color: white; /* optionnel, pour visibilité */
+    border-radius: 10px; /* optionnel, pour les bords arrondis */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
 }
 
 #basDePage {
@@ -141,6 +162,7 @@ h1 {
         display: flex;
         justify-content: left;
         align-items: center;
+        background-repeat: ;
     }
 
     h1 {
