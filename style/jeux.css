@@ -24,6 +24,22 @@ font-size: 35px;
     justify-items: left;
 }
 
+#images-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: (3, auto);
+    gap: 20px;
+    padding: 20px;
+    justify-items: center;
+}
+
+#images-container img {
+    width: 200px;
+    height: auto;
+    border-radius: 10px;
+    border: 5px solid #262C3A;
+  }
+
 @media screen and (max-width:900px) {
 
     header {

@@ -9,7 +9,7 @@ async function startGame() {
     let apiUrl = '';
 
     if (level === 'facile') {
-        apiUrl = 'https://mocki.io/v1/49998f59-6350-47cc-b01c-6b1af31186f8'
+        apiUrl = 'https://mocki.io/v1/1750af9d-0495-4f92-8919-d1b32dc2958f'
     } else if (level === 'moyen') {
         apiUrl = 'https://mocki.io/v1/5f7816bc-b321-40d8-9fbd-0ac71ba4de56'
     } else if (level === 'difficile') {
@@ -26,7 +26,7 @@ async function startGame() {
     } catch (error) {
         console.log(error)
     }
-    
+
 
 }
 
@@ -43,28 +43,25 @@ function addImage(data) {
     imagesContainer.innerHTML = '';
     //réinitiallise le conteneur avant d'ajouter des images
 
+
+    let allImages = [];
     data.images.forEach(image => {
-        //parcours chaque élement du tableau (data.imagePairs qui contient deux objets du tableau)
-        const imageDiv = document.createElement('div');
-        //créer une div qui contiens les paires d'images
-        imageDiv.classList.add('memory-pair');
-        //class memory-pair pour le css
+        allImages.push(image); // 1ère copie
+        allImages.push(image); // 2ème copie
+    });
 
-        const img1 = document.createElement('img');
-        //créer un élément qui ajoute une image sur la page 
-        img1.src = image;
-        //définit la source de l'image 
-        img1.alt = 'Image 1';
+    // 2. Mélange le tableau
+    allImages.sort(() => Math.random() - 0.5);
 
-        const img2 = document.createElement('img');
-        img2.src = image;
-        img2.alt = 'Image 2';
+    // 3. Crée et ajoute les cartes (face visible pour test, à cacher ensuite)
+    allImages.forEach((image, index) => {
+        const img = document.createElement('img');
+        img.src = image;
+        img.alt = `Carte ${index}`;
+        img.classList.add('memory-card'); // pour style ou logique future
 
-        imageDiv.appendChild(img1);
-        imageDiv.appendChild(img2);
-        //ajoute la première image comme enfant de l'élément div (imageDiv)
-
-        imagesContainer.appendChild(imageDiv);
-        //cette ligne ajoute une paire d'images au conteneur principale
+        imagesContainer.appendChild(img);
     });
 }
+
+
