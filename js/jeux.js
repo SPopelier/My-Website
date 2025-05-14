@@ -30,6 +30,42 @@ async function startGame() {
 
 }
 
+let clickCount = 0;
+let card1 = null;
+let card2 = null;
+
+function cardClicked() {
+    if (this.classList.contains('revealed') || this.classList.contains('matched')) return;
+
+    this.classList.add('revealed');
+
+    if (clickCount === 0) {
+        card1 = this;
+        clickCount = 1;
+    } else if (clickCount === 1) {
+        card2 = this;
+        clickCount = 2;
+
+        if (card1.querySelector('.front-face').src === card2.querySelector('.front-face').src) {
+            card1.classList.add('matched');
+            card2.classList.add('matched');
+            resetCards();
+        } else {
+            setTimeout(() => {
+                card1.classList.remove('revealed');
+                card2.classList.remove('revealed');
+                resetCards();
+            }, 1000);
+        }
+    }
+}
+
+function resetCards() {
+    clickCount = 0;
+    card1 = null;
+    card2 = null;
+}
+
 function addImage(data) {
     document.getElementById('game-info').innerHTML = `
     <h2>${data.nom}</h2>
@@ -51,17 +87,36 @@ function addImage(data) {
     });
 
     // 2. Mélange le tableau
-    allImages.sort(() => Math.random() - 0.5);
+    allImages.sort(() => Math.random() - 0.5);//méthode .sort qui calcul les différences
 
     // 3. Crée et ajoute les cartes (face visible pour test, à cacher ensuite)
     allImages.forEach((image, index) => {
-        const img = document.createElement('img');
-        img.src = image;
-        img.alt = `Carte ${index}`;
-        img.classList.add('memory-card'); // pour style ou logique future
-
-        imagesContainer.appendChild(img);
+        const card = document.createElement('div');
+        card.classList.add('memory-card');
+    
+        const frontFace = document.createElement('img');
+        frontFace.src = image;
+        frontFace.classList.add('front-face');
+    
+        const backFace = document.createElement('img');
+        backFace.src =  'https://fond-ecran-anime.fr/wp-content/uploads/2022/09/Live-Wallpaper-Iphone-Computer-Desktop-1080p-Wallpaper-Wallpapers-Android-Backgrounds-Desktop-Live-Wallpapers-Funny-Wallpapers-576x1024.jpg';
+        backFace.classList.add('back-face');
+    
+        card.appendChild(frontFace);
+        card.appendChild(backFace);
+    
+        card.addEventListener("click", cardClicked);
+    
+        imagesContainer.appendChild(card);
     });
+    
+
 }
+
+
+
+
+
+
 
 
