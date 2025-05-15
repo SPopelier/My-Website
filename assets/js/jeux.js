@@ -51,7 +51,7 @@ async function startGame() {
     } else if (level === 'moyen') {
         apiUrl = 'https://mocki.io/v1/c43d8ec6-c390-4a2d-9841-16a8c9cfa9a2'
     } else if (level === 'difficile') {
-        apiUrl = 'https://mocki.io/v1/cb6b3070-0649-4f91-9414-e4bafc40419a'
+        apiUrl = 'https://mocki.io/v1/3fe8f993-cfd7-4d53-b405-00bb3afc7515'
     }
 
 
