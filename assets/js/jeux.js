@@ -1,3 +1,36 @@
+/*const menuHamburger = document.querySelector(".menu-burger")
+const navLinks = document.querySelector(".nav-links")
+
+menuHamburger.addEventListener('click',()=>{
+    // Si la classe 'mobile-menu' est présente dans la liste des class
+    console.log("Liste des classe : ", navLinks.classList);
+    console.log("La liste ne contient pas la classe mobile-menu, donc le menu n'est pas ouvert : ", navLinks.classList.contains('mobile-menu'));
+    if(!navLinks.classList.contains('mobile-menu')){
+        //Ajouter la classe
+        navLinks.classList.add('mobile-menu');
+        navLinks.classList.add('menu-open');
+        //Afficher
+        navLinks.style = "display:block";
+    }else{
+        //Retirer la classe la classe
+        navLinks.classList.remove('mobile-menu');
+        navLinks.classList.remove('menu-open');
+        //Masque
+        navLinks.style = "display:none";
+    }
+
+})*/
+
+/*
+document.addEventListener('DOMContentLoaded', () => {
+    const refreshBtn = document.getElementById('btnRefresh');
+    if (refreshBtn) {
+        refreshBtn.addEventListener('click', () => {
+            window.location.reload(false);
+        });
+    }
+});
+*/
 document.querySelector('button').addEventListener('click', startGame);
 //addEventListener pour réagir au click
 
@@ -14,20 +47,20 @@ async function startGame() {
     let apiUrl = '';
 
     if (level === 'facile') {
-        apiUrl = 'https://mocki.io/v1/1750af9d-0495-4f92-8919-d1b32dc2958f'
+        apiUrl = 'https://mocki.io/v1/b814d754-4ad4-438e-bf58-9431e91c136c'
     } else if (level === 'moyen') {
-        apiUrl = 'https://mocki.io/v1/5f7816bc-b321-40d8-9fbd-0ac71ba4de56'
+        apiUrl = 'https://mocki.io/v1/c43d8ec6-c390-4a2d-9841-16a8c9cfa9a2'
     } else if (level === 'difficile') {
-        apiUrl = 'https://mocki.io/v1/b718fd8c-248f-4f16-bc98-f3c0f727a5e6'
+        apiUrl = 'https://mocki.io/v1/cb6b3070-0649-4f91-9414-e4bafc40419a'
     }
 
 
     //construis URL de API
+    console.log("apiUrl",apiUrl);
     try {
         const response = await fetch(apiUrl)
         const json = await response.json()
         addImage(json)
-        console.log(json)
     } catch (error) {
         console.log(error)
     }
@@ -126,7 +159,7 @@ function addImage(data) {
         card.setAttribute('data-image', image);
 
         const frontFace = document.createElement('img');
-        frontFace.src = image;
+        frontFace.src = '/assets//img/' + image;
         frontFace.classList.add('front-face');
 
         const backFace = document.createElement('img');

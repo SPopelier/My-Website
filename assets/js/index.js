@@ -22,6 +22,7 @@ menuHamburger.addEventListener('click',()=>{
 })
 
 document.addEventListener('DOMContentLoaded', () => {
+    console.log("Index is loaded");
     const refreshBtn = document.getElementById('btnRefresh');
     if (refreshBtn) {
         refreshBtn.addEventListener('click', () => {

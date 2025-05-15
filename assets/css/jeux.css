@@ -1,0 +1,107 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding: 1rem;
+}
+
+h3 {
+    font-size: 45px;
+    text-align: left;
+    color: #61D929;
+    text-shadow:
+        -2px -2px 0 #1e5a02af,
+        2px 2px 0 #1e5a02af;
+}
+
+#textLabel {
+    font-size: 35px;
+}
+
+#regles {
+    margin: 2rem;
+    font-size: 30px;
+    background-color: #1e5a02af;
+}
+
+#difficulte {
+    /*position: absolute;
+    justify-items: left;*/
+}
+
+#images-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 100px;
+    padding: 20px;
+    justify-items: center;
+}
+
+#images-container img {
+    width: 200px;
+    max-width: 200px;
+    border-radius: 10px;
+    cursor: pointer;
+    ;
+}
+
+.memory-card {
+    width: 200px;
+    height: 300px;
+    position: relative;
+}
+
+.memory-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /*pour que les images prennent la taille du conteneur*/
+    position: absolute;
+    backface-visibility: hidden;
+    border-radius: 10px;
+}
+
+.front-face {
+    transform: rotateY(180deg);
+}
+
+
+.memory-card.revealed .front-face {
+    transform: rotateY(0);
+    z-index: 2;
+}
+
+.memory-card.revealed .back-face {
+    transform: rotateY(180deg);
+}
+
+.boutonContainer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    }
+
+
+    .boutonContainer .buttonRick {
+       margin: unset;
+    }
+/* ---- MEDIA QUERIES POUR RENDRE LE DESIGN RESPONSIVE ---- */
+
+@media screen and (max-width:900px) {
+
+    .niveau-container {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .niveau-container>* {
+        width: 100%;
+        /* occupe toute la largeur */
+    }
+
+    }

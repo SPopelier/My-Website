@@ -12,7 +12,6 @@ body {
 
 header {
     height: 200px;
-    width: 100vw;
     background-image: url("../img/backgroundHeader.jpg");
     background-color: #262C3A;
     background-repeat: no-repeat;
@@ -27,6 +26,7 @@ h1 {
         -2px -2px 0 #61D929,
         2px 2px 0 #61D929;
 }
+
 
 .titlePage {
     font-size: 50px;
@@ -53,6 +53,7 @@ button:hover {
     width: 100%;
     box-sizing: border-box;
     align-items: last baseline;
+    z-index: 10;
 }
 
 .navbar a {
@@ -125,9 +126,11 @@ button:hover {
     background-size: cover;
 }
 
+.w-100{
+    width: 100%;
+}
 
 .buttonRick {
-    justify-content: center;
     padding: 20px;
     font-size: 18px;
     margin: 0 auto;
@@ -162,12 +165,12 @@ form {
         display: flex;
         justify-content: left;
         align-items: center;
-        background-repeat: ;
+        background-repeat: no-repeat ;
     }
 
     h1 {
         font-size: 26px;
-        max-width: 50vw;
+        max-width: 40vw;
         text-align: left;
         color: #61D929;
         padding: 2px 4px;
